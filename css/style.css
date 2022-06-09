@@ -2,23 +2,26 @@ body{
     font-family:'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
-
+.layout{
+    width: 100%;
+}
 
 .layout{
     display: grid;
     grid-template-columns: repeat(2, ifr);
-    grid-template-rows: 100px 100% 200px;
-    border: solid rgb(209, 45, 190);
+    grid-template-rows: 150px 100% 150px;
+    gap: 20px;
+    border: solid rgb(14, 202, 20);
 }
 
 .main-header{ 
     background-color: #C4170C;
-    border: solid blue;
 }
 
 .header-content{
     margin: 0px 50px 0px 50px;
     grid-column: 1/-1;
+    grid-row: 1/2;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     display: flex;
     flex-direction: row;
@@ -28,8 +31,8 @@ body{
 }
 
 .main-header-button{
-    width: 100px;
-    height: 50px;
+    min-width: 100px;
+    min-height: 50px;
     border: none;
     background-color: #C4170C;
     display: flex;
@@ -78,9 +81,8 @@ body{
 }
 
 .main-content{
-    width: 99,9%;
+    width: 100%;
     margin: auto;
-    border: solid rgb(25, 208, 46);
     grid-row: 2/3;
 }
 
@@ -161,9 +163,8 @@ body{
 }
 
 .main-content-section-one{
-    border: solid rgb(6, 6, 213);
-    margin: 0px 50px;
-    padding: 10px 0px;
+    margin: 30px 50px;
+    padding: 10px 17px;
     grid-column: 1/-1;
     display: flex;
     flex-direction: row;
@@ -173,13 +174,33 @@ body{
 .main-section{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-items: flex-start;
     width: 600px;
-    height: 100%;
+}
+
+.main-section h2{
+    margin: 0px;
+    font-size: 15px;
+
+}
+
+.main-section h3{
+    color: #C4170C;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+.main-section p{
+    font-size: 16px;
+    font-family: 'Segoe UI';
+}
+
+.main-foot{
+    color: #746565;
 }
 
 .imagem{
-    width: 500px;
+    min-width: 500px;
     height: 250px;
     background-image: url("../imagens/notas.png");
     background-repeat: no-repeat;
@@ -190,17 +211,46 @@ body{
 
 
 .main-content-verMais{
-    border: solid rgb(6, 6, 213);
     grid-column: 1/-1;
-    grid-row: 1/2;
-    display: grid;
-    
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+.main-content-verMais-button{
+    background-color: #C4170C;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+}
+
+.main-content-verMais-button p{
+    text-transform: uppercase;
+    font-size: 15px;
 }
 
 
 
 .footer-content{
-    border: solid rgb(6, 6, 213);
+    border: solid rgb(235, 27, 75);
     grid-column: 1/-1;
-   
+    grid-row: 3/4;
+    height: 100%;
+    background-color: #C4170C;
+    display: grid;
+    grid-template-columns: 300px 200px;
+    grid-template-rows: 50px 50px;   
+}
+
+.footer-content-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.footer-content-logo a{
+    margin-left: 20px;
 }
